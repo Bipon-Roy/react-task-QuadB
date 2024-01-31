@@ -1,0 +1,8 @@
+/* NavLinks Custom Style only for large screen */
+@media screen and (min-width: 1024px) {
+    nav a.active {
+        font-weight: 600;
+        padding: 0 3px 5px 3px;
+        border-bottom: 3px solid #2563eb;
+    }
+}
