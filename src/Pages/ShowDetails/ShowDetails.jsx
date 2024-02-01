@@ -40,15 +40,15 @@ const ShowDetails = () => {
                 <div className="rounded-xl md:w-1/2 lg:w-[680px] lg:h-[500px]">
                     <img
                         className="h-[400px] w-full md:h-full "
-                        src={renderMovie?.show.image.original}
-                        alt={renderMovie?.show.name}
+                        src={renderMovie?.show?.image?.original}
+                        alt={renderMovie?.show?.name}
                     />
                 </div>
                 <div className="space-y-3 my-6 md:my-0 md:w-1/2 lg:w-full">
                     <p className="text-2xl font-medium mb-4">{renderMovie?.show.name}</p>
                     <div className="flex gap-1">
                         <span className="font-medium">Genres: </span>
-                        {renderMovie?.show.genres.map((item, idx) => (
+                        {renderMovie?.show?.genres.map((item, idx) => (
                             <p
                                 key={idx}
                                 className="max-w-fit px-2 bg-blue-500 text-white rounded-3xl flex items-center text-sm"
@@ -61,12 +61,14 @@ const ShowDetails = () => {
 
                     <p className="font-medium">
                         <span>Language: </span>
-                        {renderMovie?.show.language}
+                        {renderMovie?.show?.language}
                     </p>
-                    <p className="font-medium">
-                        <span>Runtime: </span>
-                        {renderMovie?.show.runtime} minutes
-                    </p>
+                    {renderMovie?.show?.runtime && (
+                        <p className="font-medium">
+                            <span>Runtime: </span>
+                            {renderMovie?.show?.runtime} minutes
+                        </p>
+                    )}
 
                     <p className="font-medium text-amber-600">
                         <span>Rating: </span>
@@ -74,7 +76,11 @@ const ShowDetails = () => {
                             ? renderMovie?.show.rating.average
                             : "N/A"}
                     </p>
-
+                    {renderMovie?.show?.status === "In Development" && (
+                        <p className="font-medium text-lg text-red-500">
+                            The Show Is In Development Process.
+                        </p>
+                    )}
                     {/* You can open the modal using document.getElementById('ID').showModal() method */}
                     <button
                         className="py-1 bg-[#ba181b] text-white px-4 rounded-sm font-medium"
