@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+// custom hook for providing the data to every component
 const useShowsData = () => {
     const [data, setData] = useState([]);
+    //providing a loading state until get the data from api
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

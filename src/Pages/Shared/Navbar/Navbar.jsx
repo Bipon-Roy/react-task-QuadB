@@ -14,7 +14,8 @@ const Navbar = () => {
     );
 
     return (
-        <div className="">
+        <div>
+            {/* dummy navbar from daisyUI */}
             <nav className="navbar max-w-7xl mx-auto pr-6 lg:px-0 lg:py-0">
                 <div className="navbar-start">
                     {/* dropdown menu for small and medium screen */}

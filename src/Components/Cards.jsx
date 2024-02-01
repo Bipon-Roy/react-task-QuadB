@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-//Recipe Card
+// Card for showing information about movie shows
 const Cards = ({ show }) => {
     const { id, name, image, status, premiered, ended, genres } = show.show; //destructuring properties
     return (

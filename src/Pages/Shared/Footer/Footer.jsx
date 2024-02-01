@@ -1,6 +1,7 @@
 const Footer = () => {
     return (
         <div>
+            {/* dummy footer from daisyUI */}
             <footer className=" bg-black text-white">
                 <div className="footer p-10 max-w-[1380px] mx-auto justify-between">
                     <aside>
