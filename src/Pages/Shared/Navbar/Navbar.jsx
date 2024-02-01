@@ -56,7 +56,7 @@ const Navbar = () => {
                         to="/manageShows"
                         className="py-1 px-5 rounded bg-slate-100 font-semibold"
                     >
-                        Manage Shows
+                        Manage Movies
                     </Link>
                 </div>
             </nav>

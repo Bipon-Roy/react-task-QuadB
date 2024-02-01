@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 //Recipe Card
 const Cards = ({ show }) => {
     const { id, name, image, status, premiered, ended, genres } = show.show; //destructuring properties
-    console.log(show.show);
     return (
         <div className="flex flex-col shadow rounded-md">
             <div className="flex justify-center">
